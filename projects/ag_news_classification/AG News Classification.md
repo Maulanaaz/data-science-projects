@@ -1,6 +1,6 @@
 # **NLP : Classifying AG News Using RNN with LSTM Architecture - Maulana Zulfikar Aziz**
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/Cover_MD.jpg?raw=true "Picture : freepik.com")
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/Cover_MD.jpg "Picture : freepik.com")
 
 
 
@@ -64,9 +64,9 @@ Data training berukuran 120.000 baris dengan masing-masing kelas memiliki 40.000
 ## **Exploratory Data Analysis**
 ### General Information
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/data_head.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/data_head.png)
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/Class_unique.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/Class_unique.png)
 
 Terlihat bahwa dataset memiliki 3 kolom, yaitu `Class Index`, `Title`, dan `Description`. Untuk kolom `Class Index` diganti namanya menjadi `Class` untuk efisiensi nama. Terlihat bahwa kelas dalam kolom target berjumlah 4.
 
@@ -74,23 +74,23 @@ Terlihat bahwa dataset memiliki 3 kolom, yaitu `Class Index`, `Title`, dan `Desc
 
 Sebelum melangkah lebih lanjut, sebaiknya kita harus tahu terlebih dahulu bagaimana bentuk distribusi setiap kelasnya, untuk mengecek apakah terjadi kasus distribusi kelas yang tidak seimbang.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/dist_class.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/dist_class.png)
 
 Terlihat bahwa distribusi antar kelas sudah seimbang, jadi tidak perlu dilakukan upsampling/downsampling.
 
 Selanjutnya, akan dicek distribusi jumlah kata untuk setiap item di dalam kolom `Description` berdasarkan kolom `Class`
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/dist_kata2.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/dist_kata.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/dist_kata2.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/dist_kata.png)
 
 Terlihat bahwa rata-rata jumlah kata per-kelas adalah sebanyak kurang lebih 200 kata.
 
 Selanjutnya, akan dilakukan pengecekan 10 kata (tidak termasuk stopwords) yang paling sering muncul untuk setiap kelasnya.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/cek_kata1.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/cek_kata2.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/cek_kata3.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/cek_kata4.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/cek_kata1.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/cek_kata2.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/cek_kata3.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/cek_kata4.png)
 
 Terlihat ada banyak kata yang tidak diperlukan selain stopwords, yaitu tanda baca. Masalah ini akan diselesaikan pada bagian Data Cleaning.
 
@@ -114,32 +114,32 @@ Dalam bagian ini, data akan diproses agar bisa digunakan untuk modelling. Persia
 
 ## **Modelling and Result**
 Dalam project ini, saya menggunakan model RNN dengan arsitektur LSTM. RNN merupakan merupakan suatu metode dalam deep learning yang digunakan untuk memproses data sekuensial dengan pemanggilan berulang. RNN digunakan dengan arsitektur LSTM yang memiliki memory cells untuk dapat menyimpan informasi dengan jangka waktu yang panjang sehingga dapat mencegah terjadinya kasus vanishing gradient. Berikut adalah model Sequential yang dibangun :
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/seq_model.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/seq_model.png)
 
 Selain itu, saya juga menggunakan 3 jenis callbacks, yaitu Checkpoint, Early Stopping, dan Reduce Learning Rate on Plateau. Fungsi loss yang digunakan untuk train model adalah Categorical Crossentrophy, dengan optimizer Adaptive Moment Estimation (ADAM) dan matriks evaluasi Accuracy.
 
 Model dilatih dengan `batch_size` 64 pada data training. Dari hasil training, didapatkan model terbaik diperoleh di Epoch 5 :
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/Epochs5.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/Epochs5.png)
 
 ## **Evaluation**
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/eval.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/eval.png)
 
 Terlihat bahwa model yang dibuat menghasilkan akurasi sekitar 88% pada data validasi.
 
 ### Plotting Accuracy and Loss of Model
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/plot_akurasi.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/plot_akurasi.png)
 Dari grafik, terlihat bahwa semakin banyak epochs yang dijalankan, akurasi model pada data train meningkat akan tetapi akurasi pada data validasi menurun. Hal ini mengindikasikan adanya Overfitting pada model, callback Checkpoint telah membantu untuk mengambil model yang terbaik, yaitu pada Epoch ke-5.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/plot_loss.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/plot_loss.png)
 
 Berdasarkan grafik, terlihat bahwa semakin banyak Epochs yang dijalankan, loss dari data train semakin turun dan loss dari data validasi semakin naik. Didapatkan kesimpulan yang sama, yaitu model mengalami Overfitting.
 
 ### Evaluation on Data Test
 Sebelum dilakukan evaluasi model terhadap data test, terlebih dahulu dilakukan data preparation pada test yang mencakup One-Hot Encoding, Tokenization, dan Padding. Berikut tampilan dari data test yang sudah melalui tahap data preparation :
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/data%20test%20overview.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/data%20test%20overview.png)
 
 Berikut adalah hasil evaluasi model pada data test :
-![](https://github.com/Maulanaaz/ML-Project/blob/main/AG%20News%20Classification/Images/eval_datatest.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/ag_news_classification/Images/eval_dataset.png)
 Model yang telah dibuat menghasilkan akurasi sebesar 87% pada data test.
 
 ## **Conclusion**
