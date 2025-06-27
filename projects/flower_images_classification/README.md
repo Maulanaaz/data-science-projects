@@ -1,8 +1,8 @@
 # **CNN : Classifying Flower Images Using Transfer Learning with MobileNetV2 Architecture - Maulana Zulfikar Aziz**
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/ML%20PROJECT.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/ML%20PROJECT.png)
 
-[File Notebook](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Flower_Image_Classifications.ipynb)
+[File Notebook](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Flower_Image_Classifications.ipynb)
 
 
 ## **Project Overview**
@@ -48,15 +48,15 @@ Data ini mencakup 2 folder, yaitu `train` dan `val`. Total gambar yang dapat dig
 Adapun jenis-jenis bunga dalam data ini mencakup : carnation, iris, bluebells, golden english, roses, fallen nephews, tulips, marigolds, dandelions, chrysanthemums, black-eyed daisies, water lilies, sunflowers, dan daisies.
 ### Data Exploration
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_1.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_1.png)
 
 Terlihat bahwa terdapat 14 jenis kelas dalam data. Ini berarti dalam project ini, akan dibangun sebuah model untuk mengklasifikan 14 jenis bunga yang berbeda. 
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_2.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_2.png)
 
 Gambar diatas menunjukkan jumlah gambar yang ada di dalam folder `train` dari masing-masing kelas dan total gambar train keseluruhan yaitu sebanyak 13642 buah gambar.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_3.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_3.png)
 
 Gambar diatas menunjukkan jumlah gambar dari folder `val` dari masing-masing kelas dan total gambar train keseluruhan yaitu sebanyak 98 buah gambar. Terlihat bahwa masing-masing kelas memiliki jumlah gambar yang sama, yaitu sebanyak 7 buah gambar.
 
@@ -64,21 +64,21 @@ Gambar diatas menunjukkan jumlah gambar dari folder `val` dari masing-masing kel
 
 Sebelum melanjutkan ke tahap pemodelan, alangkah lebih baiknya kita mengetahui terlebih dahulu beberapa informasi tentang data kita melalui visualisasi.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_5.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_5.png)
 
 Gambar diatas merupakan salah satu gambar yang terdapat pada folder `train`. Dari gambar diatas, kita dapat mengetahui bahwa gambar pada kita berukuran 256 x 256. 
 
 Sekarang kita tahu mengenai dimensi dari gambar pada data kita. Sekarang akan dilihat 9 sampel gambar dalam data kita, untuk mencari tahu bagaimana sudut pemotretan dari masing-masing gambar.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_6.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_6.png)
 
 Ternyata sudut pemotretan dalam gambar pada data kita tidak seragam, artinya beberapa gambar ada yang dipotret dari jarak jauh dan ada yang dipotret dari jarak dekat, adapula yang dipotret dari samping dan dari atas. Oleh karena itu, pada tahap **Data Preparation** tidak akan dilakukan proses data augmentation dengan mengubah-ubah bentuk dari gambar.
 ## **Data Preparation**
 
 Setelah mengetahui informasi mengenai gambar pada data kita, saatnya kita _prepare_ data kita untuk keperluan pemodelan. Dalam tahap ini, hanya akan dilakukan rescaling, yaitu menormalisasi nilai pixel pada gambar agar berada pada rentang 0 sampai 1, berikut adalah hasilnya :
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_7.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_8.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_7.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_8.png)
 Terlihat bahwa gambar train kita berjumlah 13642 buah gambar dan gambar val kita berjumlah 98 gambar, hal ini sama dengan yang telah didapatkan pada bagian **Data Exploration**. Dalam project ini, _batch size_ yang digunakan adalah 32.
 
 ## **Modelling**
@@ -86,7 +86,7 @@ Terlihat bahwa gambar train kita berjumlah 13642 buah gambar dan gambar val kita
 MobileNetV2 merupakan salah satu arsitektur CNN yang memiliki performa baik di _mobile device_. MobileNetV2 berbasis pada struktur residual terbalik dimana koneksi residual berada di antara lapisan-lapisan _bottleneck_. Lapisan ekspansi intermediate menggunakan konvolusi depthwise ringan untuk menyaring fitur sebagai sumber non-linieritas. Secara keseluruhan, arsitektur MobileNetV2 berisi lapisan _initial fully convolutional_ layer dengan 32 filter, diikuti oleh 19 lapisan _bottleneck_ residual. [2]
 
 Berikut adalah model yang dibangun pada project ini.
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_9.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_9.png)
 
 Setelah model dibangun, tahap selanjutnya adalah mendefinisikan _Callbacks_. Adapun _Callbacks_ yang digunakan dalam project ini adalah _Early Stopping_, _Checkpoint_, dan _Reduce Learning Rate on Plateau_.
 
@@ -94,14 +94,14 @@ Loss yang akan digunakan pada model ini adalah _Categorical Crossentrophy_ denga
 
 Setelah semua persiapan selesai, waktunya _fitting_ model menggunakan data train. Dan didapatkan model dengan _weight_ terbaik terdapat pada epoch ke-12.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_10.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_10.png)
 
 ## **Evaluation**
 
 Setelah model berhasil dibuat, tahap selanjutnya adalah mengevaluasi proses konvergensi model dengan menggunakan visualisasi _accuracy_ plot dan _loss_ plot.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_11.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_12.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_11.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_12.png)
 
 Terlihat bahwa semakin meningkat epoch, semakin besar akurasi dari data train dan semakin kecil juga _loss_ dari data train. Akan tetapi tidak begitu dengan data val, akurasi dari data val tidak selalu meningkat dan _loss_ dari data val juga tidak selalu menurun seiring dengan pertambahan epoch. Inilah kegunaan dari _Callbacks_ yang telah didefinisikan tadi, yaitu untuk menghindarkan model dari keadaan _Overfitting_.
 
@@ -109,8 +109,8 @@ Terlihat bahwa semakin meningkat epoch, semakin besar akurasi dari data train da
 
 Setelah model dibangun, ini saatnya model disimpan dalam format TF-Lite, agar nantinya model klasifikasi bunga yang telah dibuat bisa di-_deploy_ ke dalam _mobile device_.
 
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_13.png?raw=true)
-![](https://github.com/Maulanaaz/ML-Project/blob/main/Flower%20Images%20Classification/Images/2_explor_14.png?raw=true)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_13.png)
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/flower_images_classification/Images/2_explor_14.png)
 
 ## **Conclusion**
 
