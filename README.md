@@ -19,12 +19,12 @@ Hi! I'm Maulana, a mathematics student with a strong interest in data science an
 
 | Project | Description | Techniques Used |
 |--------|-------------|------------------|
-| [🌸 Flower Classification](./projects/flower_classification) | Image classification of 5 flower types using CNN | CNN, Image Augmentation, TensorFlow |
+| [🌸 Flower Classification](./projects/flower_images_classification) | Image classification of 14 flower types using CNN | CNN, TensorFlow, Transfer Learning |
 | [❤️ Heart Disease Prediction](./projects/heart_disease_prediction) | Predicting coronary heart disease from patient data | Logistic Regression, XGBoost, EDA |
 | [✊ Rock Paper Scissors](./projects/rock_paper_scissors) | Classify hand gestures for a RPS game | CNN, Image Preprocessing |
 | [📚 AG News Topic Classification](./projects/ag_news_nlp) | Classify news articles into 4 categories | NLP, TF-IDF, Logistic Regression |
 | [📖 Book Recommender System](./projects/book_recommender) | Recommender system based on user ratings | Collaborative Filtering, Cosine Similarity |
 
-> 💡 Each project includes Jupyter Notebooks, detailed README, and reproducible code.
+> 💡 Each project includes Jupyter Notebooks, Python file, detailed README, and reproducible code.
 
 --
