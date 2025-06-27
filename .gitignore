@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Jupyter & VS Code
+.vscode/
+.env
+
+# Data & model artifacts
+*.csv
+*.zip
+*.h5
+*.pkl
+*.joblib
+data/
+datasets/
