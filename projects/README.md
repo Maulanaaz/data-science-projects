@@ -7,7 +7,7 @@ Each sub‑folder includes a dedicated README, Jupyter notebooks, and (if needed
 |--------|---------|--------------|-----------------|
 | ✅ | [Flower Image Classification](./flower_images_classification) | Classify 14 flower species from photos | Transfer learning – MobileNetV2, CNN, TensorFlow |
 | 🚧 | [Coronary Heart Disease Prediction](./coronary_heart_disease) | Predict CHD risk from patient records | EDA, XGBoost, ROC‑AUC, SHAP |
-| 🚧 | [AG News Topic Classification](./ag_news_classification) | Categorise news headlines (politics, sports, tech, biz) | NLP preprocessing, TF‑IDF, Logistic Regression |
+| ✅ | [AG News Topic Classification](./ag_news_classification) | Categorise news headlines (world, sport, business, sci/tech) | NLP preprocessing, TF‑IDF, LSTM |
 | 🚧 | [Book Recommender System](./book_recommender) | Recommend books based on user ratings | Collaborative filtering, cosine similarity |
 
 > **Legend**  
