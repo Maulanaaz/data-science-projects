@@ -378,7 +378,7 @@ The example prompts used to map the 10 cause categories to each row and correspo
 ![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_AI_5.png?raw=True)
 <p align="center"><em>Figure 36. Prompt to map the 10 cause categories to each row</em></p>
 <div align="center">
-  <img src="https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_AIOUT_5.png?raw=True" alt="Dataset Info" width="300"/>
+  <img src="https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_AIOUT_5.png?raw=True" alt="Dataset Info" width="500"/>
 </div>
 <p align="center"><em>Figure 37. Output to map the 10 cause categories to each row</em></p>
 
@@ -386,3 +386,4 @@ The example prompts used to map the 10 cause categories to each row and correspo
 [1] M. Siering, "Explainability and fairness of RegTech for regulatory enforcement: Automated monitoring of consumer complaints," Decision Support Systems, vol. 158, p. 113782, Jul. 2022.
 
 [2] Consumer Financial Protection Bureau, “Consumer Financial Protection Bureau,” https://www.consumerfinance.gov/, [Accessed: Aug. 12, 2025].
+
