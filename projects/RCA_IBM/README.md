@@ -1,5 +1,7 @@
 # **Root Cause Analysis of Financial Consumer Complaints : A Case Study Using IBM Granite on the CFPB Dataset**
+Maulana Zulfikar Aziz
 
+maulanazulfikarrz@gmail.com
 ## **Project Overview**
 ### Background
 The protection of financial consumers has emerged as a critical focus area, receiving growing attention in recent years [1]. Financial institutions handle thousands of consumer complaints every month, many of which are submitted in free-text form. These narratives often contain valuable information about the issues customers face, but their unstructured nature makes them challenging to process, classify, and analyze efficiently. Manual Root Cause Analysis (RCA) requires significant time and resources, potentially delaying resolution and limiting the ability to identify recurring problems. As the volume of consumer complaints continues to rise, there is a pressing need for a more efficient and effective method of handling and resolving these issues.
@@ -371,3 +373,4 @@ The example prompts used to categorize the root causes and corresponding output 
 [1] M. Siering, "Explainability and fairness of RegTech for regulatory enforcement: Automated monitoring of consumer complaints," Decision Support Systems, vol. 158, p. 113782, Jul. 2022.
 
 [2] Consumer Financial Protection Bureau, “Consumer Financial Protection Bureau,” https://www.consumerfinance.gov/, [Accessed: Aug. 12, 2025].
+
