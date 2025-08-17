@@ -6,7 +6,7 @@ maulanazulfikarrz@gmail.com
 ### Background
 The protection of financial consumers has emerged as a critical focus area, receiving growing attention in recent years [1]. Financial institutions handle thousands of consumer complaints every month, many of which are submitted in free-text form. These narratives often contain valuable information about the issues customers face, but their unstructured nature makes them challenging to process, classify, and analyze efficiently. Manual Root Cause Analysis (RCA) requires significant time and resources, potentially delaying resolution and limiting the ability to identify recurring problems. As the volume of consumer complaints continues to rise, there is a pressing need for a more efficient and effective method of handling and resolving these issues.
 
-To address this challenge, this project utilizes complaint data from the Consumer Financial Protection Bureau (CFPB), an independent U.S. government agency established in 2011 to protect consumers from unfair, deceptive, or abusive financial practices [2]. The dataset contains detailed complaint narratives along with product, issue, and company information, providing a rich source for analysis. By applying IBM Granite, a large language model capable of natural language understanding and reasoning, the project aims to automate the classification of complaints into standardized root cause categories. This approach enables faster identification of key problem areas and supports data-driven decision-making for service improvement.
+To address this challenge, this project leverages complaint data from the Consumer Financial Protection Bureau (CFPB), an independent U.S. government agency established in 2011 to protect consumers from unfair, deceptive, or abusive financial practices [2]. The dataset contains detailed complaint narratives along with product, issue, and company information, providing a rich source for analysis. By applying IBM Granite, a large language model capable of natural language understanding and reasoning, the project aims to automate the classification of complaints into standardized root cause categories. This approach enables faster identification of key problem areas and supports data-driven decision-making for service improvement.
 
 ### Problem Statement
 Identifying the underlying root causes from a large dataset with free-text complaints is difficult and time-consuming without automation.
@@ -98,7 +98,7 @@ Figure 5 shows that `Credit reporting or other personal consumer reports` has th
 ![Complaint Volume by Sub-product](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/complaint_by_subproduct.png?raw=True)
 <p align="center"><em>Figure 6. Complaint volume by sub-product.</em></p>
 
-The sub-product column initially had 52 unique values. To simplify the visualization, I focused on the top 13 and grouped the rest under `Other Problem`.
+The sub-product column initially had 52 unique values. To simplify the visualization, we focused on the top 13 and grouped the rest under `Other Problem`.
 
 As shown in Figure 6, the sub-product `Credit reporting` has the highest complaint volume with 24,719 complaints. This is a significant number compared to other sub-products, and it aligns with the Product column where `Credit reporting or other personal consumer reports` also shows a high volume. This indicates that Credit reporting should be investigated further, and it will serve as the main focus of our Root Cause Analysis.
 
@@ -214,7 +214,7 @@ As shown in Figure 20, `Inaccurate Reporting` was the biggest contributor to the
 ![Spike 2](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_Spike2.png?raw=True)
 <p align="center"><em>Figure 21. Complaint Spike 2 Analysis</em></p>
 
-Similar to Spike 1, `Inaccurate Reporting` was also the main driver of Spike 2, accounting for 69.72% of the cases, that is 12.04% higher than the baseline. The top spike phrases were essentially the same as those in Spike 1.
+Similar to Spike 1, `Inaccurate Reporting` was also the main driver of Spike 2, accounting for 67.37% of the cases, that is 16.77% higher than the baseline. The top spike phrases were essentially the same as those in Spike 1.
 
 This suggests that `Inaccurate Reporting` is a serious issue that needs deeper investigation to uncover its root cause. For the next analysis, we will focus specifically on `Inaccurate Reporting` as the main driver behind the complaint spikes.
 
@@ -295,7 +295,7 @@ Spike 2 points to a company-specific issue, with recurring themes of inaccurate 
 
 The Baseline period shows that even outside of spikes, credit reporting errors and identity theft remain persistent issues, indicating that these problems are systemic rather than isolated events.
 
-Across all three periods : Spike 1, Spike 2, and Baseline, the most recurring issues are tied to **Inaccurate Credit Reporting** and **Identity Theft–related problems**. These two themes consistently appear as major contributors to complaint volumes, whether during widespread spikes or in the more stable baseline period. This suggests that the challenges are systemic rather than isolated, and addressing them would have the greatest overall impact
+Across all three periods : Spike 1, Spike 2, and Baseline, the most recurring issues are tied to **Inaccurate Credit Reporting** and **Identity Theft–related problems**. These two themes consistently appear as major contributors to complaint volumes, whether during widespread spikes or in the more stable baseline period. This suggests that the challenges are systemic rather than isolated, and addressing them would have the greatest overall impact.
 
 ### Recommendation
 Based on the Root Cause Analysis, two issues stand out as the most persistent drivers of consumer complaints: **Inaccurate Credit Reporting** and **Identity Theft–related problems**. To address these causes, the following steps are recommended:
@@ -369,9 +369,20 @@ The example prompts used to categorize the root causes and corresponding output 
 </div>
 <p align="center"><em>Figure 35. Output to categorize the root causes</em></p>
 
+### 5. Mapping the 10 Cause Categories to Each Row  
+
+After categorizing the root causes into 10 broader categories, the IBM Granite model was used to assist with the mapping task. This approach is beneficial as it saves time, ensures consistency, and improves accuracy. With a clear and well-structured prompt, the IBM Granite model efficiently completed the mapping process.
+
+The example prompts used to map the 10 cause categories to each row and corresponding output are illustrated in Figure 36 and Figure 37 below.
+
+![](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_AI_5.png?raw=True)
+<p align="center"><em>Figure 36. Prompt to map the 10 cause categories to each row</em></p>
+<div align="center">
+  <img src="https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_AIOUT_5.png?raw=True" alt="Dataset Info" width="300"/>
+</div>
+<p align="center"><em>Figure 37. Output to map the 10 cause categories to each row</em></p>
+
 ## **References**
 [1] M. Siering, "Explainability and fairness of RegTech for regulatory enforcement: Automated monitoring of consumer complaints," Decision Support Systems, vol. 158, p. 113782, Jul. 2022.
 
 [2] Consumer Financial Protection Bureau, “Consumer Financial Protection Bureau,” https://www.consumerfinance.gov/, [Accessed: Aug. 12, 2025].
-
-
