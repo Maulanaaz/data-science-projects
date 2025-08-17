@@ -214,7 +214,7 @@ As shown in Figure 20, `Inaccurate Reporting` was the biggest contributor to the
 ![Spike 2](https://github.com/Maulanaaz/data-science-projects/blob/main/projects/RCA_IBM/Images/RCA_Spike2.png?raw=True)
 <p align="center"><em>Figure 21. Complaint Spike 2 Analysis</em></p>
 
-Similar to Spike 1, `Inaccurate Reporting` was also the main driver of Spike 2, accounting for 67.37% of the cases, that is 16.77% higher than the baseline. The top spike phrases were essentially the same as those in Spike 1.
+Similar to Spike 1, `Inaccurate Reporting` was also the main driver of Spike 2, accounting for 69.72% of the cases, that is 12.04% higher than the baseline. The top spike phrases were essentially the same as those in Spike 1.
 
 This suggests that `Inaccurate Reporting` is a serious issue that needs deeper investigation to uncover its root cause. For the next analysis, we will focus specifically on `Inaccurate Reporting` as the main driver behind the complaint spikes.
 
@@ -373,4 +373,5 @@ The example prompts used to categorize the root causes and corresponding output 
 [1] M. Siering, "Explainability and fairness of RegTech for regulatory enforcement: Automated monitoring of consumer complaints," Decision Support Systems, vol. 158, p. 113782, Jul. 2022.
 
 [2] Consumer Financial Protection Bureau, “Consumer Financial Protection Bureau,” https://www.consumerfinance.gov/, [Accessed: Aug. 12, 2025].
+
 
