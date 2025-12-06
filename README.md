@@ -25,8 +25,7 @@ Hi! I'm Maulana, a mathematics student with a strong interest in data science an
 | [📚 AG News Topic Classification](./projects/ag_news_nlp) | Classify news articles into 4 categories | NLP, TF-IDF, Logistic Regression |
 | [📖 Book Recommender System](./projects/book_recommender) | Recommender system based on user ratings | Collaborative Filtering, Cosine Similarity |
 | [📖 Credit Score Card Model](./projects/ScoreCardModel_HCI_Internship) | Score Card Model to Predict Customer Risk | RF, XGBoost, LightGBM, Logistic Regression |
-| [📖 End-to-End ETL Pipeline : Python Orchestration & SQL Transformation](./projects/ETL_Pipeline_idxpartners
-) | End-to-End ETL Pipeline using Python (Pandas & Pyodbc) and Stored Procedures Generation | ETL, Snowflake Schema, SQL Stored Procedures |
+| [📖 End-to-End ETL Pipeline : Python Orchestration & SQL Transformation](./projects/ETL_Pipeline_idxpartners) | End-to-End ETL Pipeline using Python (Pandas & Pyodbc) and Stored Procedures Generation | ETL, Snowflake Schema, SQL Stored Procedures |
 > 💡 Each project includes Jupyter Notebooks, Python file, detailed README, and reproducible code.
 
 --
