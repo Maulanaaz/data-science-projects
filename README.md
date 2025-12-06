@@ -1,6 +1,6 @@
-# 🧠 Data Science & Machine Learning Portfolio
+# 🧠 Data Science, ML, and Data Engineering Portfolio
 
-Welcome to my personal portfolio repository, where I showcase real-world data science and machine learning projects. Each project includes clear documentation, clean code, and valuable insights, demonstrating my capability in solving business problems with data.
+Welcome to my personal portfolio repository, where I showcase real-world data science, machine learning, and data engineering projects. Each project includes clear documentation, clean code, and valuable insights, demonstrating my capability in solving business problems with data.
 
 ## 📌 About Me
 
